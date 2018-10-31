@@ -199,8 +199,7 @@ class DetailOutcomingCell: UITableViewCell {
 
                 if isShowUSD {
                     if transactionModel.tokenRate != nil {
-                        let value = transactionModel.tokenRate!.USD * transactionModel.tokenAmount.value!
-                        balanceLabel.text =  "\(value.cleanValue) USD"
+                        balanceLabel.text =  "\(transactionModel.tokenRate!.USD.cleanValue) USD"
                     } else {
                         balanceLabel.text =  "\(transactionModel.rate!.USD.cleanValue) USD"
                     }
