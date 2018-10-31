@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InputBigWithQRTableViewCell" rowHeight="147" id="0Cl-hY-viZ" customClass="InputBigWithQRTableViewCell" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Cl-hY-viZ" id="rzk-BO-FaB">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="146.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFd-8P-SRe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YeV-nG-Nwg" customClass="KMPlaceholderTextView" customModule="KMPlaceholderTextView">
+                        <rect key="frame" x="0.0" y="24" width="375" height="111"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="111" id="7DO-UY-6Af"/>
+                        </constraints>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="done"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                <color key="value" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="placeholder"/>
+                        </userDefinedRuntimeAttributes>
+                    </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DiO-bD-bOW">
+                        <rect key="frame" x="14" y="8" width="22" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Zaf-nA-VhL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Syb-7N-bCc">
+                        <rect key="frame" x="0.0" y="135" width="375" height="1"/>
+                        <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="1rf-v1-ECc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="YeV-nG-Nwg" secondAttribute="trailing" id="0uD-uF-clz"/>
+                    <constraint firstItem="DiO-bD-bOW" firstAttribute="top" secondItem="rzk-BO-FaB" secondAttribute="top" constant="8" id="3TN-f0-1Gz"/>
+                    <constraint firstItem="Syb-7N-bCc" firstAttribute="leading" secondItem="rzk-BO-FaB" secondAttribute="leading" id="6AX-ZD-Kah"/>
+                    <constraint firstItem="Syb-7N-bCc" firstAttribute="top" secondItem="LFd-8P-SRe" secondAttribute="bottom" id="96q-ff-EmU"/>
+                    <constraint firstItem="YeV-nG-Nwg" firstAttribute="top" secondItem="rzk-BO-FaB" secondAttribute="top" constant="24" id="BSd-9y-w41"/>
+                    <constraint firstAttribute="trailing" secondItem="LFd-8P-SRe" secondAttribute="trailing" id="Cbv-PR-7Bc"/>
+                    <constraint firstItem="LFd-8P-SRe" firstAttribute="height" secondItem="YeV-nG-Nwg" secondAttribute="height" constant="24" id="WJe-Pi-eLV"/>
+                    <constraint firstAttribute="trailing" secondItem="Syb-7N-bCc" secondAttribute="trailing" id="gg6-8m-vac"/>
+                    <constraint firstItem="LFd-8P-SRe" firstAttribute="leading" secondItem="rzk-BO-FaB" secondAttribute="leading" id="hMp-Sh-rru"/>
+                    <constraint firstItem="DiO-bD-bOW" firstAttribute="leading" secondItem="YeV-nG-Nwg" secondAttribute="leading" constant="14" id="nGS-RU-tOZ"/>
+                    <constraint firstItem="YeV-nG-Nwg" firstAttribute="leading" secondItem="rzk-BO-FaB" secondAttribute="leading" id="oCU-ZA-iFR"/>
+                    <constraint firstItem="LFd-8P-SRe" firstAttribute="top" secondItem="rzk-BO-FaB" secondAttribute="top" id="rsu-e9-uBY"/>
+                    <constraint firstItem="LFd-8P-SRe" firstAttribute="width" secondItem="YeV-nG-Nwg" secondAttribute="width" id="yA6-nu-awT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="inputTextView" destination="YeV-nG-Nwg" id="WNh-0B-xqX"/>
+                <outlet property="shadowBackView" destination="LFd-8P-SRe" id="sSi-rr-QrI"/>
+                <outlet property="statusLineView" destination="Syb-7N-bCc" id="69D-KK-wHf"/>
+                <outlet property="titleLabel" destination="DiO-bD-bOW" id="Xzj-8e-Byp"/>
+            </connections>
+            <point key="canvasLocation" x="174.5" y="130.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsExportKeyWarningTableViewCell" rowHeight="137" id="JZ2-b9-UHF" customClass="SettingsExportKeyWarningTableViewCell" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="137"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JZ2-b9-UHF" id="qAX-tE-FJL">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="136.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FKp-H2-dga">
+                        <rect key="frame" x="10" y="25" width="355" height="86.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6zX-ng-O6Z">
+                                <rect key="frame" x="15" y="15" width="325" height="56.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Warning:">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="SFUIDisplay-Bold"/>
+                                            <font key="NSOriginalFont" size="14" name="SFUIDisplay-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" Export plain private key is very dangerous. We recommended you backup with mnemonic or keystore.">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="SFUIDisplay-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="6zX-ng-O6Z" secondAttribute="bottom" constant="15" id="BIA-5t-KY9"/>
+                            <constraint firstAttribute="trailing" secondItem="6zX-ng-O6Z" secondAttribute="trailing" constant="15" id="DYS-EC-9NJ"/>
+                            <constraint firstItem="6zX-ng-O6Z" firstAttribute="top" secondItem="FKp-H2-dga" secondAttribute="top" constant="15" id="dKh-fU-83M"/>
+                            <constraint firstItem="6zX-ng-O6Z" firstAttribute="leading" secondItem="FKp-H2-dga" secondAttribute="leading" constant="15" id="y97-mu-dWn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FKp-H2-dga" firstAttribute="top" secondItem="qAX-tE-FJL" secondAttribute="top" constant="25" id="0yA-4q-1ji"/>
+                    <constraint firstAttribute="trailing" secondItem="FKp-H2-dga" secondAttribute="trailing" constant="10" id="IQx-ZH-CRe"/>
+                    <constraint firstItem="FKp-H2-dga" firstAttribute="leading" secondItem="qAX-tE-FJL" secondAttribute="leading" constant="10" id="Jm3-Qv-CEo"/>
+                    <constraint firstAttribute="bottom" secondItem="FKp-H2-dga" secondAttribute="bottom" constant="25" id="VxA-jh-w7E"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backView" destination="FKp-H2-dga" id="NgC-bH-cbD"/>
+                <outlet property="messageLabel" destination="6zX-ng-O6Z" id="kpS-hj-6pZ"/>
+            </connections>
+            <point key="canvasLocation" x="6.5" y="-21.5"/>
+        </tableViewCell>
+    </objects>
+</document>

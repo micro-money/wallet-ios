@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsSwitcherTableViewCell" id="P0Z-8q-Les" customClass="SettingsSwitcherTableViewCell" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="P0Z-8q-Les" id="Qic-ic-eiv">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kH9-O7-8wG">
+                        <rect key="frame" x="15" y="11" width="44" height="21"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o05-lN-1ds">
+                        <rect key="frame" x="310" y="6" width="51" height="31"/>
+                        <connections>
+                            <action selector="switchValueChanged:" destination="P0Z-8q-Les" eventType="valueChanged" id="nqY-g9-zTx"/>
+                        </connections>
+                    </switch>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ilA-nJ-mZX">
+                        <rect key="frame" x="0.0" y="42.5" width="375" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="zJO-N0-QgW"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ilA-nJ-mZX" secondAttribute="bottom" id="233-i5-MQX"/>
+                    <constraint firstItem="o05-lN-1ds" firstAttribute="centerY" secondItem="Qic-ic-eiv" secondAttribute="centerY" id="5hD-9P-4Su"/>
+                    <constraint firstItem="kH9-O7-8wG" firstAttribute="leading" secondItem="Qic-ic-eiv" secondAttribute="leading" constant="15" id="9uq-Wf-suP"/>
+                    <constraint firstAttribute="trailing" secondItem="ilA-nJ-mZX" secondAttribute="trailing" id="GE5-W2-cOf"/>
+                    <constraint firstAttribute="trailing" secondItem="o05-lN-1ds" secondAttribute="trailing" constant="16" id="hXH-e2-20q"/>
+                    <constraint firstItem="ilA-nJ-mZX" firstAttribute="leading" secondItem="Qic-ic-eiv" secondAttribute="leading" id="vvF-th-hZR"/>
+                    <constraint firstItem="kH9-O7-8wG" firstAttribute="centerY" secondItem="Qic-ic-eiv" secondAttribute="centerY" id="x2P-FK-V0y"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="lineView" destination="ilA-nJ-mZX" id="SZm-bx-IC3"/>
+                <outlet property="switchView" destination="o05-lN-1ds" id="IvD-8J-XOc"/>
+                <outlet property="titleLabel" destination="kH9-O7-8wG" id="lkt-lx-Uyr"/>
+            </connections>
+            <point key="canvasLocation" x="-61" y="-159"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TransactionDetailTableViewCell" rowHeight="62" id="cVx-rH-iRF" customClass="TransactionDetailTableViewCell" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="62"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cVx-rH-iRF" id="bmx-7i-SIS">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="61.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sp7-RW-Muj">
+                        <rect key="frame" x="20" y="10" width="330" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="3XB-CG-H7h"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="16"/>
+                        <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbR-aq-Cuq">
+                        <rect key="frame" x="20" y="35" width="331" height="17"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                        <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="Sp7-RW-Muj" firstAttribute="leading" secondItem="bmx-7i-SIS" secondAttribute="leading" constant="20" id="0mz-Vl-I3C"/>
+                    <constraint firstItem="vbR-aq-Cuq" firstAttribute="leading" secondItem="bmx-7i-SIS" secondAttribute="leading" constant="20" id="19R-ho-Z2m"/>
+                    <constraint firstAttribute="trailing" secondItem="vbR-aq-Cuq" secondAttribute="trailing" constant="24" id="3HG-xk-aBU"/>
+                    <constraint firstItem="vbR-aq-Cuq" firstAttribute="top" secondItem="Sp7-RW-Muj" secondAttribute="bottom" constant="6" id="FSE-xC-v12"/>
+                    <constraint firstItem="Sp7-RW-Muj" firstAttribute="top" secondItem="bmx-7i-SIS" secondAttribute="top" constant="10" id="NPN-OV-Iw6"/>
+                    <constraint firstAttribute="trailing" secondItem="Sp7-RW-Muj" secondAttribute="trailing" constant="25" id="rIo-RT-4aU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="dataLabel" destination="vbR-aq-Cuq" id="cLx-xD-lhp"/>
+                <outlet property="titleLabel" destination="Sp7-RW-Muj" id="kgm-zZ-jJ5"/>
+            </connections>
+            <point key="canvasLocation" x="-30" y="59"/>
+        </tableViewCell>
+    </objects>
+</document>

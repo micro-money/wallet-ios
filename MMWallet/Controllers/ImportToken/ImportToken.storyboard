@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="c2L-Zc-QOW">
+            <objects>
+                <navigationController id="2DH-E5-99Y" customClass="BaseNavigationController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VxG-V3-8SU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ib6-KF-FbW" kind="relationship" relationship="rootViewController" id="Rji-sd-dW5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FCO-9A-Rah" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-345" y="130"/>
+        </scene>
+        <!--Import Token View Controller-->
+        <scene sceneID="Ydc-ij-Fkq">
+            <objects>
+                <viewController storyboardIdentifier="ImportTokenViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ib6-KF-FbW" customClass="ImportTokenViewController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YCZ-hl-EN6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IVC-Q6-KRQ">
+                                <rect key="frame" x="0.0" y="130" width="375" height="1"/>
+                                <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="ysc-by-e7P"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHK-4H-ecQ">
+                                <rect key="frame" x="0.0" y="131" width="375" height="536"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Import Token" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kQU-iZ-iBw">
+                                <rect key="frame" x="15" y="89" width="123" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="wzz-pP-Zgw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZHK-4H-ecQ" firstAttribute="top" secondItem="IVC-Q6-KRQ" secondAttribute="bottom" id="1ce-uH-sBY"/>
+                            <constraint firstItem="kQU-iZ-iBw" firstAttribute="leading" secondItem="wZT-Hc-Cju" secondAttribute="leading" constant="15" id="4Pe-W1-yqw"/>
+                            <constraint firstItem="IVC-Q6-KRQ" firstAttribute="top" secondItem="kQU-iZ-iBw" secondAttribute="bottom" constant="13" id="Jc8-Hp-MmR"/>
+                            <constraint firstItem="IVC-Q6-KRQ" firstAttribute="leading" secondItem="wZT-Hc-Cju" secondAttribute="leading" id="KqF-yz-9aD"/>
+                            <constraint firstItem="ZHK-4H-ecQ" firstAttribute="leading" secondItem="wZT-Hc-Cju" secondAttribute="leading" id="Wbo-n1-gaU"/>
+                            <constraint firstItem="wZT-Hc-Cju" firstAttribute="bottom" secondItem="ZHK-4H-ecQ" secondAttribute="bottom" id="bZb-KC-SIx"/>
+                            <constraint firstItem="IVC-Q6-KRQ" firstAttribute="trailing" secondItem="wZT-Hc-Cju" secondAttribute="trailing" id="bq7-wQ-T9w"/>
+                            <constraint firstItem="ZHK-4H-ecQ" firstAttribute="trailing" secondItem="wZT-Hc-Cju" secondAttribute="trailing" id="sBw-Tr-olH"/>
+                            <constraint firstItem="kQU-iZ-iBw" firstAttribute="top" secondItem="wZT-Hc-Cju" secondAttribute="top" constant="25" id="vKV-oc-Ojx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wZT-Hc-Cju"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4M6-Bu-fF9"/>
+                    <connections>
+                        <outlet property="containerView" destination="ZHK-4H-ecQ" id="kJd-To-M6j"/>
+                        <outlet property="lineView" destination="IVC-Q6-KRQ" id="qH5-wY-y7c"/>
+                        <outlet property="titleLabel" destination="kQU-iZ-iBw" id="2tQ-Ad-KCZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQz-3W-u85" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="130"/>
+        </scene>
+        <!--Import Token Watch View Controller-->
+        <scene sceneID="wIp-bF-rxp">
+            <objects>
+                <viewController storyboardIdentifier="ImportTokenWatchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="R5g-G0-Nhb" customClass="ImportTokenWatchViewController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Xj-Ob-ECU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EA3-yP-gjz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1yh-vf-Rw6" firstAttribute="bottom" secondItem="EA3-yP-gjz" secondAttribute="bottom" id="1o4-IT-Qgr"/>
+                            <constraint firstItem="EA3-yP-gjz" firstAttribute="trailing" secondItem="1yh-vf-Rw6" secondAttribute="trailing" id="98T-FR-mp7"/>
+                            <constraint firstItem="EA3-yP-gjz" firstAttribute="top" secondItem="3Xj-Ob-ECU" secondAttribute="top" id="G26-NN-uqI"/>
+                            <constraint firstItem="EA3-yP-gjz" firstAttribute="leading" secondItem="1yh-vf-Rw6" secondAttribute="leading" id="ysO-h9-mcf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1yh-vf-Rw6"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="1o4-IT-Qgr" id="i5d-bx-1ev"/>
+                        <outlet property="tableView" destination="EA3-yP-gjz" id="YJE-jL-fLB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5mq-T7-BgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1084" y="130"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SendButtonTableViewCell" rowHeight="100" id="EJ8-Wn-oBE" customClass="SendButtonTableViewCell" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EJ8-Wn-oBE" id="J4T-fw-KDE">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVx-31-fO6">
+                        <rect key="frame" x="15" y="25" width="345" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQm-6G-9Kc" customClass="MMSlidingButton" customModule="MMWallet" customModuleProvider="target">
+                        <rect key="frame" x="15" y="25" width="345" height="49.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="wWV-EO-eqy"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="buttonText" value="Fill the fileds first"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="buttonTextColor">
+                                <color key="value" red="0.61568627450000002" green="0.61568627450000002" blue="0.61568627450000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="dragPointWidth">
+                                <real key="value" value="70"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="dragPointColor">
+                                <color key="value" red="0.94117647058823528" green="0.51372549019607838" blue="0.054901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="buttonCornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="dragPointTextColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="buttonColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="image" keyPath="imageName" value="nextWhiteIcon"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="buttonUnlockedColor">
+                                <color key="value" red="0.94117647059999998" green="0.51372549020000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="buttonUnlockedText" value="-"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hQm-6G-9Kc" secondAttribute="trailing" constant="15" id="02D-pJ-mO4"/>
+                    <constraint firstItem="WVx-31-fO6" firstAttribute="trailing" secondItem="hQm-6G-9Kc" secondAttribute="trailing" id="Zwg-DK-PWZ"/>
+                    <constraint firstItem="WVx-31-fO6" firstAttribute="leading" secondItem="hQm-6G-9Kc" secondAttribute="leading" id="ctj-Pg-xk3"/>
+                    <constraint firstItem="WVx-31-fO6" firstAttribute="top" secondItem="hQm-6G-9Kc" secondAttribute="top" id="dth-Uo-iuV"/>
+                    <constraint firstItem="hQm-6G-9Kc" firstAttribute="leading" secondItem="J4T-fw-KDE" secondAttribute="leading" constant="15" id="o7B-ag-QJv"/>
+                    <constraint firstItem="hQm-6G-9Kc" firstAttribute="centerY" secondItem="J4T-fw-KDE" secondAttribute="centerY" id="rp9-GE-tGI"/>
+                    <constraint firstItem="WVx-31-fO6" firstAttribute="bottom" secondItem="hQm-6G-9Kc" secondAttribute="bottom" id="wiH-0c-xXG"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="backView" destination="WVx-31-fO6" id="roV-92-d8w"/>
+                <outlet property="slidingButton" destination="hQm-6G-9Kc" id="4uo-GC-QV9"/>
+            </connections>
+            <point key="canvasLocation" x="99.5" y="81"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="nextWhiteIcon" width="14" height="20"/>
+    </resources>
+</document>

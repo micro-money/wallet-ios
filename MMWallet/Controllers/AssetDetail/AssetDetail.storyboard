@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Asset Detail View Controller-->
+        <scene sceneID="2Sn-rg-oBj">
+            <objects>
+                <viewController storyboardIdentifier="AssetDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uOu-Ed-g1W" customClass="AssetDetailViewController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NaL-Vg-xXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pGl-Dh-p1D">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pGl-Dh-p1D" firstAttribute="leading" secondItem="BpQ-nT-e0e" secondAttribute="leading" id="WdO-Od-omc"/>
+                            <constraint firstItem="pGl-Dh-p1D" firstAttribute="top" secondItem="BpQ-nT-e0e" secondAttribute="top" id="csM-Vh-GTG"/>
+                            <constraint firstItem="BpQ-nT-e0e" firstAttribute="bottom" secondItem="pGl-Dh-p1D" secondAttribute="bottom" id="eLx-Hl-znm"/>
+                            <constraint firstItem="BpQ-nT-e0e" firstAttribute="trailing" secondItem="pGl-Dh-p1D" secondAttribute="trailing" id="emB-da-qNl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BpQ-nT-e0e"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wcx-Fg-RQB">
+                        <barButtonItem key="backBarButtonItem" title="Asset" id="cce-7o-jYS"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="pGl-Dh-p1D" id="eVd-Xq-9Ou"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="imV-O3-Gzq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="199.19999999999999" y="208.24587706146929"/>
+        </scene>
+        <!--Base Navigation Controller-->
+        <scene sceneID="7af-c1-3zv">
+            <objects>
+                <navigationController storyboardIdentifier="AssetDetailNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ok0-pH-oCY" customClass="BaseNavigationController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="m0Y-B9-sXh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.94117647059999998" green="0.51372549020000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uOu-Ed-g1W" kind="relationship" relationship="rootViewController" id="isd-uN-7za"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDt-K8-DBZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-521" y="208"/>
+        </scene>
+    </scenes>
+</document>

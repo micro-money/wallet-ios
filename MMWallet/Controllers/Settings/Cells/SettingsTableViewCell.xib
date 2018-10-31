@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingsTableViewCell" id="ws0-Jm-32j" customClass="SettingsTableViewCell" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ws0-Jm-32j" id="yu0-Mt-wi8">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2T6-VD-juR">
+                        <rect key="frame" x="15" y="11" width="44" height="21"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nextSmallIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-Kv-gob">
+                        <rect key="frame" x="351" y="15.5" width="8" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="2j1-Pd-y1i"/>
+                            <constraint firstAttribute="height" constant="13" id="5K5-1k-sTi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6F-7f-VMb">
+                        <rect key="frame" x="293" y="11" width="44" height="21"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9dP-53-4U3">
+                        <rect key="frame" x="0.0" y="43" width="375" height="1"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="vYX-Jx-0Vd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MpS-Kv-gob" firstAttribute="centerY" secondItem="yu0-Mt-wi8" secondAttribute="centerY" id="KPP-o0-zo8"/>
+                    <constraint firstItem="2T6-VD-juR" firstAttribute="centerY" secondItem="yu0-Mt-wi8" secondAttribute="centerY" id="LpY-bE-MXn"/>
+                    <constraint firstAttribute="trailing" secondItem="9dP-53-4U3" secondAttribute="trailing" id="Vie-eN-lIV"/>
+                    <constraint firstItem="N6F-7f-VMb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2T6-VD-juR" secondAttribute="trailing" constant="8" id="gIu-1l-HsD"/>
+                    <constraint firstItem="2T6-VD-juR" firstAttribute="leading" secondItem="yu0-Mt-wi8" secondAttribute="leading" constant="15" id="iog-te-Du5"/>
+                    <constraint firstAttribute="bottom" secondItem="9dP-53-4U3" secondAttribute="bottom" id="m9u-AM-Fbz"/>
+                    <constraint firstAttribute="trailing" secondItem="MpS-Kv-gob" secondAttribute="trailing" constant="16" id="ntP-PI-G1R"/>
+                    <constraint firstItem="N6F-7f-VMb" firstAttribute="centerY" secondItem="yu0-Mt-wi8" secondAttribute="centerY" id="pR5-uv-9Dn"/>
+                    <constraint firstItem="9dP-53-4U3" firstAttribute="leading" secondItem="yu0-Mt-wi8" secondAttribute="leading" id="uDQ-wK-9yG"/>
+                    <constraint firstItem="MpS-Kv-gob" firstAttribute="leading" secondItem="N6F-7f-VMb" secondAttribute="trailing" constant="14" id="uf7-VE-Ulx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="dataLabel" destination="N6F-7f-VMb" id="fAb-M5-WzC"/>
+                <outlet property="iconView" destination="MpS-Kv-gob" id="MGH-tT-UIH"/>
+                <outlet property="lineView" destination="9dP-53-4U3" id="Rw8-R4-nIR"/>
+                <outlet property="titleLabel" destination="2T6-VD-juR" id="P5c-Yb-ohk"/>
+            </connections>
+            <point key="canvasLocation" x="116.5" y="-94"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="nextSmallIcon" width="8" height="13"/>
+    </resources>
+</document>

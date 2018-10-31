@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Medium.otf">
+            <string>SFProDisplay-Medium</string>
+        </array>
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="VerifyEmailView" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZD-Tx-Cj5">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.015686274510000001" green="0.015686274510000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xJ4-2l-8Fz">
+                    <rect key="frame" x="8" y="150.5" width="359" height="366"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TrM-We-KSI">
+                            <rect key="frame" x="323" y="4" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="32" id="4m9-zK-utg"/>
+                                <constraint firstAttribute="height" constant="32" id="HyM-oG-I5l"/>
+                            </constraints>
+                            <state key="normal" image="closeIcon"/>
+                            <connections>
+                                <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="TDB-Do-IOC"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please verify your email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qN4-LJ-2Gv">
+                            <rect key="frame" x="16" y="69" width="327" height="26.5"/>
+                            <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We’ve send an verification link to test@email.ru. You have to click on it to protect your account." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fk9-EK-zEx">
+                            <rect key="frame" x="32" y="130.5" width="295" height="61"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-fl-L0g">
+                            <rect key="frame" x="15" y="245" width="329" height="50"/>
+                            <color key="backgroundColor" red="0.94117647059999998" green="0.51372549020000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Cak-NG-HJj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="17"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="okAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="zez-wK-g4G"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JV3-mv-L2N">
+                            <rect key="frame" x="15" y="316" width="329" height="30"/>
+                            <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                            <state key="normal" title="Resend email">
+                                <color key="titleColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="resendAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="mOn-Gm-f4W"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="V2b-fl-L0g" secondAttribute="trailing" constant="15" id="5b4-WK-AZb"/>
+                        <constraint firstItem="TrM-We-KSI" firstAttribute="top" secondItem="xJ4-2l-8Fz" secondAttribute="top" constant="4" id="5wp-oO-03e"/>
+                        <constraint firstItem="V2b-fl-L0g" firstAttribute="leading" secondItem="xJ4-2l-8Fz" secondAttribute="leading" constant="15" id="Cax-ez-6GB"/>
+                        <constraint firstAttribute="trailing" secondItem="Fk9-EK-zEx" secondAttribute="trailing" constant="32" id="DaE-yL-G8T"/>
+                        <constraint firstAttribute="bottom" secondItem="JV3-mv-L2N" secondAttribute="bottom" constant="20" id="Je0-75-uSU"/>
+                        <constraint firstItem="JV3-mv-L2N" firstAttribute="leading" secondItem="xJ4-2l-8Fz" secondAttribute="leading" constant="15" id="MaB-3k-ccm"/>
+                        <constraint firstItem="qN4-LJ-2Gv" firstAttribute="top" secondItem="xJ4-2l-8Fz" secondAttribute="top" constant="69" id="T5C-ke-Jz1"/>
+                        <constraint firstItem="qN4-LJ-2Gv" firstAttribute="leading" secondItem="xJ4-2l-8Fz" secondAttribute="leading" constant="16" id="YKy-xP-PAv"/>
+                        <constraint firstAttribute="height" constant="366" id="a59-8i-hNg"/>
+                        <constraint firstItem="Fk9-EK-zEx" firstAttribute="top" secondItem="qN4-LJ-2Gv" secondAttribute="bottom" constant="35" id="bWB-tB-IsS"/>
+                        <constraint firstAttribute="trailing" secondItem="TrM-We-KSI" secondAttribute="trailing" constant="4" id="bXe-tL-KjI"/>
+                        <constraint firstAttribute="bottom" secondItem="V2b-fl-L0g" secondAttribute="bottom" constant="71" id="fbJ-i0-T03"/>
+                        <constraint firstAttribute="trailing" secondItem="JV3-mv-L2N" secondAttribute="trailing" constant="15" id="mHU-Y3-NTH"/>
+                        <constraint firstItem="Fk9-EK-zEx" firstAttribute="leading" secondItem="xJ4-2l-8Fz" secondAttribute="leading" constant="32" id="t6H-T4-IGY"/>
+                        <constraint firstAttribute="trailing" secondItem="qN4-LJ-2Gv" secondAttribute="trailing" constant="16" id="ur8-do-BTI"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xJ4-2l-8Fz" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K89-n8-Z1V"/>
+                <constraint firstItem="BZD-Tx-Cj5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="URc-r8-euv"/>
+                <constraint firstItem="BZD-Tx-Cj5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZcA-pH-UcO"/>
+                <constraint firstItem="xJ4-2l-8Fz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="bwv-ro-eQX"/>
+                <constraint firstItem="BZD-Tx-Cj5" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="c3q-K6-oHd"/>
+                <constraint firstItem="BZD-Tx-Cj5" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="cHV-Ad-tEc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xJ4-2l-8Fz" secondAttribute="trailing" constant="8" id="hIX-YT-cZF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backView" destination="xJ4-2l-8Fz" id="gfn-JO-Foj"/>
+                <outlet property="closeButton" destination="TrM-We-KSI" id="yA5-cR-4OX"/>
+                <outlet property="messageLabel" destination="Fk9-EK-zEx" id="SMJ-xc-OF0"/>
+                <outlet property="okButton" destination="V2b-fl-L0g" id="wwl-tS-JDM"/>
+                <outlet property="resendButton" destination="JV3-mv-L2N" id="BHT-Os-fJp"/>
+                <outlet property="titleLabel" destination="qN4-LJ-2Gv" id="mql-RT-3Iq"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeIcon" width="14" height="14"/>
+    </resources>
+</document>

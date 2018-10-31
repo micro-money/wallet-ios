@@ -1,0 +1,169 @@
+/* 
+  Localizable.strings
+  MMWallet
+
+  Created by Dmitry Muravev on 14.07.2018.
+  Copyright © 2018 micromoney. All rights reserved.
+*/
+
+"common.actions.signin" = "Sign In";
+"common.actions.signup" = "Sign Up";
+"common.actions.cancel" = "Cancel";
+"common.actions.next" = "Next";
+"common.actions.done" = "Done";
+"common.actions.iagree" = "I AGREE";
+
+"common.screens.signin" = "Sign In";
+"common.screens.signup" = "Sign Up";
+
+"common.password" = "Password";
+
+"common.addtocontact" = "Add to existing contact";
+"common.createnewcontact" = "Create new contact";
+
+"common.alert-cancel" = "Cancel";
+"common.logout-alert-title" = "Are you sure you want to logout?";
+"common.logout-alert-destructive" = "Logout";
+"common.delete-contact-alert-title" = "Are you sure you want to delete contact?";
+"common.delete-contact-destructive" = "Delete";
+"common.delete-asset-alert-title" = "Are you sure you want to delete asset?";
+"common.delete-asset-destructive" = "Delete";
+
+"signin.info.donthaveaccount" = "You don’t have account?";
+"navigation.titles.createpasscode" = "Create Passcode";
+
+"common.infonetwork" = "Service temporary unavailable";
+"common.erroremail" = "Invalid email";
+"common.errorpassword" = "Passwords doesn’t match";
+
+"setuppin.settings.title" = "Passcode Settings";
+"setuppin.settings.alphanumeric" = "Custom Alphanumeric Code";
+"setuppin.settings.sixdigit" = "6-Digit Numeric Code";
+"setuppin.settings.fourdigit" = "4-Digit Numeric Code";
+"setuppin.settings.welcome" = "It’s your first login on this iPhone Please create a Passcode.";
+"setuppin.settings.repeat" = "Repeat Passcode";
+
+"setuppin.usetouchid" = "Use Touch ID?";
+"setuppin.usefaceid" = "Use Face ID?";
+"setuppin.usetouchidtext" = "Do you want to use Touch ID to log in this app?";
+"setuppin.usefaceidtext" = "Do you want to use Face ID to log in this app?";
+
+"backup.navigation.title" = "Create Backup";
+"backup.buttons.create" = "Create Backup";
+"backup.buttons.skip" = "Do it late";
+
+"registration.info.infolabel" = "Don’t screenshot";
+"registration.info.detaillabel" = "We highly recommended you write the Mnemonic words (Backup Phrase) on paper and keep it in a safe place, anyone get it can access or spend your assets. Also get start with small amount of assets.";
+
+"registration.mnemonic.infolabel" = "Please Backup the mnemonic wordst";
+"registration.mnemonic.detaillabel" = "Those 12 mnemonic words are for recovering your wallet, write them correctly on paper and keep in a safe place.";
+"registration.mnemonic.buttons.next" = "Next word";
+"registration.mnemonic.buttons.back" = "Previous";
+
+"validator.loginrequired" = "Login is required";
+"validator.logininvalid" = "That login is invalid.\nPlease try again.";
+
+"validator.passwordrequired" = "Password is required";
+"validator.passwordinvalid" = "Password must be at least 8 characters long.";
+"validator.signininvalid" = "Invalid login or password";
+"validator.credentialsinvalid" = "Invalid credentials";
+
+"newassets.buttoncreate" = "create asset";
+
+"newassets.myassets" = "My Assets";
+
+"newassets.addnew" = "Add new Asset";
+"newassets.addnewcurrency" = "Add new currency";
+"newassets.addnewcryptocurrency" = "Add new cryptocurrency";
+"newassets.addnewtoken" = "Add new token";
+"newassets.addnewcurrencytext" = "USD, EURO, Yuan and 100 other";
+"newassets.addnewcryptocurrencytext" = "BTC, ETH, LTC and 32 other";
+"newassets.addnewtokentext" = "AMM, OmiseGo, ICO Box and 12 other";
+
+"newassetscrypto.addnew" = "Add new Cryptocurrency";
+"newassetscrypto.importnew" = "Import new Cryptocurrency";
+"newassetscrypto.new" = "Create new asset";
+"newassetscrypto.import" = "Import Exists wallet";
+"newassetscrypto.newtext" = "BTC, ETH, LTC and 100 other";
+"newassetscrypto.importtext" = "From Blockchain.info, MyEtherWallet and other";
+
+"newassetstoken.addnew" = "Add new Token";
+"newassetstoken.importnew" = "Import new Token";
+"newassetstoken.searchnew" = "Search new Token";
+"newassetstoken.import" = "Import Token";
+"newassetstoken.scaddress" = "Smart contract address";
+
+"importwallet.title" = "import wallet";
+"importwallet.mnemonic" = "Mnemonic";
+"importwallet.official" = "Official";
+"importwallet.watch" = "Watch";
+"importwallet.button" = "import wallet";
+"importwallet.privatekey" = "Private key";
+"importwallet.privatekeyplaceholder" = "Please input your private key";
+"importwallet.assetname" = "Asset name";
+"importwallet.officialtext" = "Ethereum’s official wallet uses keystore format to store encrypted private key information, you can copy and paste the content into the input field, or with the help of QR code generator.";
+"importwallet.official" = "Keystore content";
+"importwallet.officialplaceholder" = "Write keystore content here.";
+"importwallet.officialpassword" = "Keystore Password";
+"importwallet.mnemonicplaceholder" = "Enter your mnemonic words. Please, use spaces to separate the words.";
+"importwallet.watchinfo" = "Watch Wallet is just the way to observe your ";
+"importwallet.watchinfo2" = " account: check balance and transaction logs, receive notifications. No private key no leaks.";
+
+"send.send" = "Send ";
+"send.sendeth" = "Send Ethereum";
+"send.sendbtc" = "Send Bitcoin";
+"send.walletaddress" = "Wallet Address";
+"send.amount" = "Amount";
+"send.button-fill" = "Fill the fileds first";
+"send.button-slide" = "Slide to send ";
+
+"receive.receive" = "Receive ";
+"receive.receiveeth" = "Receive Ethereum";
+"receive.receivebtc" = "Receive Bitcoin";
+"receive.walletaddress" = "Your Wallet Address";
+"receive.amount" = "Amount";
+"receive.button" = "Request money";
+
+"settings.copykeys" = "Copy keys";
+"settings.privatekey" = "Private Key";
+"settings.privatekeypopup" = "Key copied";
+"settings.downloadastext" = "DOWNLOAD AS TEXT";
+"settings.exportkeystore" = "Export Keystore";
+"settings.exportprivatekeys" = "Export Private Keys";
+"settings.copykeystore" = "Copy Keystore";
+"settings.downloadaskstext" = "Download Keystore as text";
+
+"settings.passcodenether" = "Enter your old passcode";
+"settings.passcodenethernew" = "Enter new Passcode";
+
+"settings.privacy-settings" = "Privacy Settings";
+"settings.app-settings" = "App settings";
+"settings.logout" = "Logout";
+"settings.use-faceID" = "Use Face ID";
+"settings.use-touchID" = "Use Touch ID";
+"settings.change-passcode" = "Change Passcode";
+"settings.create-backup" = "Create Backup";
+"settings.appearance" = "Appearance";
+"settings.dark" = "Dark";
+"settings.light" = "Light";
+"settings.keystore" = "Keystore";
+"settings.keystorebutton" = "Copy keystore";
+"settings.keystoreqrbutton" = "SHOW QR Code";
+
+"addressbook.empty" = "No contacts";
+"addressbook.fromasset" = "Choose the from asset";
+"addressbook.yourasset" = "Choose your asset";
+"addressbook.chooseaddress" = "Choose %@’s address";
+"addressbook.choosecurrency" = "Choose currency";
+"addressbook.addcontact" = "Add contact";
+"addressbook.name" = "Name";
+
+"verifyemail.title" = "Please verify your email";
+"verifyemail.to" = "We’ve send an verification link to ";
+"verifyemail.text" = ". You have to click on it to protect your account.";
+"verifyemail.resend" = "Resend email";
+"verifyemail.send" = "Send to email";
+
+"password.title" = "Please enter your wallet password";
+"password.subtitle" = "To perfom actions with your wallet you should enter your password.";
+"password.button" = "OK";

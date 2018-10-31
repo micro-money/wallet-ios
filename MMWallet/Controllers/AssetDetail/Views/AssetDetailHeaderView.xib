@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SF-Pro-Text-Bold.otf">
+            <string>SFProText-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AssetDetailHeaderView" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YfK-5X-1fI">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kZ-8y-7eZ" customClass="GradientView" customModule="MMWallet" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="151"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                    <color key="value" red="0.37254901959999998" green="0.42352941179999998" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                    <color key="value" red="0.43529411759999997" green="0.48627450979999998" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                    <real key="value" value="0.0"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbh-GZ-OUE">
+                            <rect key="frame" x="170" y="13" width="35" height="10"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="Gg7-ck-Cl8"/>
+                                <constraint firstAttribute="height" constant="10" id="HOo-Qj-L3n"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" image="chevronIcon"/>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQb-05-M59">
+                            <rect key="frame" x="15" y="44" width="345" height="107"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ethereumSmallIcon" translatesAutoresizingMaskIntoConstraints="NO" id="iQA-Bq-dQX">
+                                    <rect key="frame" x="0.0" y="0.0" width="13" height="13"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="13" id="8b3-2c-SuX"/>
+                                        <constraint firstAttribute="width" constant="13" id="Bva-yD-xlL"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOTAL BALANCE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1P-OR-614">
+                                    <rect key="frame" x="18" y="0.0" width="93.5" height="14"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="14" id="PlC-hl-usD"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 0 000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HO9-DA-kNG">
+                                    <rect key="frame" x="0.0" y="18" width="139" height="45.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="Fgu-2H-8QI"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="38"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0000 ETH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saE-hu-Eba">
+                                    <rect key="frame" x="0.0" y="68.5" width="90" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="c2C-4y-uQW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SFProText-Bold" family="SF Pro Text" pointSize="15"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="saE-hu-Eba" firstAttribute="top" secondItem="HO9-DA-kNG" secondAttribute="bottom" constant="5" id="Qu3-IV-UC2"/>
+                                <constraint firstItem="saE-hu-Eba" firstAttribute="leading" secondItem="AQb-05-M59" secondAttribute="leading" id="Spk-YE-CeH"/>
+                                <constraint firstItem="HO9-DA-kNG" firstAttribute="top" secondItem="K1P-OR-614" secondAttribute="bottom" constant="4" id="hsR-D1-Nww"/>
+                                <constraint firstItem="HO9-DA-kNG" firstAttribute="leading" secondItem="AQb-05-M59" secondAttribute="leading" id="j3b-BY-afC"/>
+                                <constraint firstItem="K1P-OR-614" firstAttribute="leading" secondItem="iQA-Bq-dQX" secondAttribute="trailing" constant="5" id="uPx-wt-Aah"/>
+                                <constraint firstItem="K1P-OR-614" firstAttribute="centerY" secondItem="iQA-Bq-dQX" secondAttribute="centerY" id="x1j-0e-BP6"/>
+                                <constraint firstItem="iQA-Bq-dQX" firstAttribute="top" secondItem="AQb-05-M59" secondAttribute="top" id="x23-8k-dBW"/>
+                                <constraint firstItem="iQA-Bq-dQX" firstAttribute="leading" secondItem="AQb-05-M59" secondAttribute="leading" id="xkJ-QL-rpf"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="9kZ-8y-7eZ" firstAttribute="leading" secondItem="YfK-5X-1fI" secondAttribute="leading" id="0pY-vW-PrO"/>
+                        <constraint firstAttribute="bottom" secondItem="9kZ-8y-7eZ" secondAttribute="bottom" id="0sX-rM-NWr"/>
+                        <constraint firstAttribute="trailing" secondItem="AQb-05-M59" secondAttribute="trailing" constant="15" id="4aE-pj-1bW"/>
+                        <constraint firstItem="Dbh-GZ-OUE" firstAttribute="centerX" secondItem="YfK-5X-1fI" secondAttribute="centerX" id="AhY-SN-BfJ"/>
+                        <constraint firstItem="9kZ-8y-7eZ" firstAttribute="top" secondItem="YfK-5X-1fI" secondAttribute="top" id="Cl7-7R-SAN"/>
+                        <constraint firstItem="AQb-05-M59" firstAttribute="top" secondItem="Dbh-GZ-OUE" secondAttribute="bottom" constant="21" id="JUZ-gK-E91"/>
+                        <constraint firstAttribute="trailing" secondItem="9kZ-8y-7eZ" secondAttribute="trailing" id="Msp-NQ-igC"/>
+                        <constraint firstItem="Dbh-GZ-OUE" firstAttribute="top" secondItem="YfK-5X-1fI" secondAttribute="top" constant="13" id="SBk-kb-WoO"/>
+                        <constraint firstItem="AQb-05-M59" firstAttribute="leading" secondItem="YfK-5X-1fI" secondAttribute="leading" constant="15" id="fGK-YK-jTv"/>
+                        <constraint firstAttribute="bottom" secondItem="AQb-05-M59" secondAttribute="bottom" id="fhi-Ig-QHr"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="YfK-5X-1fI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="EyL-cm-Zy5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="YfK-5X-1fI" secondAttribute="bottom" id="Jc8-sx-zhD"/>
+                <constraint firstItem="YfK-5X-1fI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="LNf-Zl-pJw"/>
+                <constraint firstItem="YfK-5X-1fI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="qzv-BD-ksh"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="balanceLabel" destination="HO9-DA-kNG" id="gsY-te-h2o"/>
+                <outlet property="cryptoBalanceLabel" destination="saE-hu-Eba" id="DL0-BV-BsW"/>
+                <outlet property="currencyIconView" destination="iQA-Bq-dQX" id="0nd-WJ-Dz8"/>
+                <outlet property="currencyLabel" destination="K1P-OR-614" id="oNj-7z-3Gk"/>
+                <outlet property="downButton" destination="Dbh-GZ-OUE" id="Pxa-zs-cgk"/>
+                <outlet property="gradientView" destination="9kZ-8y-7eZ" id="2cK-Xh-a4q"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="chevronIcon" width="35" height="11"/>
+        <image name="ethereumSmallIcon" width="13" height="13"/>
+    </resources>
+</document>

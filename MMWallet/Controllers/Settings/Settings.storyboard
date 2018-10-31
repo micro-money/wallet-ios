@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="K7F-Dg-q1k">
+            <objects>
+                <navigationController id="Fqx-Ta-LR2" customClass="BaseNavigationController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gek-5C-e9E">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ytt-2W-Efp" kind="relationship" relationship="rootViewController" id="oLh-2h-W04"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XsR-8W-bdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-351" y="210"/>
+        </scene>
+        <!--Passcode-->
+        <scene sceneID="hp7-VD-DqU">
+            <objects>
+                <viewController storyboardIdentifier="SettingsPasscodeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ytt-2W-Efp" customClass="SettingsPasscodeViewController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Jy-rF-QZU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j2t-fd-EfE">
+                                <rect key="frame" x="96.5" y="293" width="182.5" height="36"/>
+                                <string key="text">Passcodes did not match.
+Try again.</string>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your old passcode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYI-3i-zeC">
+                                <rect key="frame" x="32" y="143.5" width="311" height="19.5"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hX-Xv-f7F" customClass="PinCodeTextField" customModule="MMWallet" customModuleProvider="target">
+                                <rect key="frame" x="56" y="193" width="263" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nZX-3B-UMi">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cRk-e2-LtY" customClass="PinInput" customModule="PinInputView">
+                                        <rect key="frame" x="5" y="5" width="252.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="90t-WR-udp"/>
+                                    <constraint firstItem="cRk-e2-LtY" firstAttribute="top" secondItem="5hX-Xv-f7F" secondAttribute="top" constant="5" id="DO0-sA-1co"/>
+                                    <constraint firstAttribute="trailing" secondItem="cRk-e2-LtY" secondAttribute="trailing" constant="5" id="VZM-WW-Tci"/>
+                                    <constraint firstAttribute="trailing" secondItem="nZX-3B-UMi" secondAttribute="trailing" id="bUg-kE-bac"/>
+                                    <constraint firstItem="nZX-3B-UMi" firstAttribute="leading" secondItem="5hX-Xv-f7F" secondAttribute="leading" id="jSd-uF-QL3"/>
+                                    <constraint firstItem="cRk-e2-LtY" firstAttribute="leading" secondItem="5hX-Xv-f7F" secondAttribute="leading" constant="5" id="jWE-8f-KAC"/>
+                                    <constraint firstAttribute="bottom" secondItem="nZX-3B-UMi" secondAttribute="bottom" id="ndq-oZ-kWz"/>
+                                    <constraint firstAttribute="bottom" secondItem="cRk-e2-LtY" secondAttribute="bottom" constant="5" id="qab-AW-ErB"/>
+                                    <constraint firstItem="nZX-3B-UMi" firstAttribute="top" secondItem="5hX-Xv-f7F" secondAttribute="top" id="x4j-U0-pWN"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="◦◦◦◦"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="secureText" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="underlineHSpacing">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderTextString" value="◦◦◦◦"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="nZX-3B-UMi"/>
+                                        <exclude reference="cRk-e2-LtY"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5hX-Xv-f7F" firstAttribute="centerX" secondItem="7Jy-rF-QZU" secondAttribute="centerX" id="0Ox-Z6-JSC"/>
+                            <constraint firstItem="5hX-Xv-f7F" firstAttribute="width" secondItem="7Jy-rF-QZU" secondAttribute="width" multiplier="0.7" id="AEn-ck-5qb"/>
+                            <constraint firstItem="j2t-fd-EfE" firstAttribute="top" secondItem="5hX-Xv-f7F" secondAttribute="bottom" constant="60" id="VOW-R6-Hoh"/>
+                            <constraint firstItem="5hX-Xv-f7F" firstAttribute="top" secondItem="tYI-3i-zeC" secondAttribute="bottom" constant="30" id="gCi-2P-Nsh"/>
+                            <constraint firstItem="tYI-3i-zeC" firstAttribute="leading" secondItem="vBi-r9-PFB" secondAttribute="leading" constant="32" id="h7D-ap-Lds"/>
+                            <constraint firstItem="tYI-3i-zeC" firstAttribute="top" secondItem="vBi-r9-PFB" secondAttribute="top" constant="79" id="iA3-iP-iBO"/>
+                            <constraint firstItem="tYI-3i-zeC" firstAttribute="centerX" secondItem="7Jy-rF-QZU" secondAttribute="centerX" id="kIy-XK-7bU"/>
+                            <constraint firstItem="j2t-fd-EfE" firstAttribute="centerX" secondItem="7Jy-rF-QZU" secondAttribute="centerX" id="ooM-Us-pgF"/>
+                            <constraint firstItem="vBi-r9-PFB" firstAttribute="trailing" secondItem="tYI-3i-zeC" secondAttribute="trailing" constant="32" id="xb0-la-uRr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vBi-r9-PFB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Passcode" id="XgR-AR-slW">
+                        <barButtonItem key="backBarButtonItem" title="Settings" id="bZi-cr-lS4"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="errorLabel" destination="j2t-fd-EfE" id="gfd-UE-qAH"/>
+                        <outlet property="pinView" destination="5hX-Xv-f7F" id="By2-lA-o8V"/>
+                        <outlet property="titleLabel" destination="tYI-3i-zeC" id="xDO-G8-rAR"/>
+                        <segue destination="O6m-Q5-r9s" kind="show" id="zvK-qL-wAQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WMR-NH-drC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="210"/>
+        </scene>
+        <!--Passcode-->
+        <scene sceneID="5nl-ql-0Cx">
+            <objects>
+                <viewController storyboardIdentifier="SettingsPasscodeNewViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O6m-Q5-r9s" customClass="SettingsPasscodeNewViewController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="22u-R0-Q4O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vdv-9H-4Eo">
+                                <rect key="frame" x="113" y="292.5" width="149" height="33"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="17"/>
+                                <state key="normal" title="Passcode Settings">
+                                    <color key="titleColor" red="0.94117647059999998" green="0.51372549020000002" blue="0.054901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingAction:" destination="O6m-Q5-r9s" eventType="touchUpInside" id="idh-7j-xDu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter new Passcode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-3B-2oY">
+                                <rect key="frame" x="112" y="143" width="152.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUe-nr-GLh" customClass="PinCodeTextField" customModule="MMWallet" customModuleProvider="target">
+                                <rect key="frame" x="56" y="192.5" width="262.5" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CBY-n9-TWU">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qLi-Fg-xrg" customClass="PinInput" customModule="PinInputView">
+                                        <rect key="frame" x="5" y="5" width="252.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="CBY-n9-TWU" secondAttribute="trailing" id="HEr-I2-lVC"/>
+                                    <constraint firstAttribute="bottom" secondItem="CBY-n9-TWU" secondAttribute="bottom" id="NyZ-rP-7sz"/>
+                                    <constraint firstAttribute="height" constant="40" id="QIl-Sb-Xhe"/>
+                                    <constraint firstAttribute="trailing" secondItem="qLi-Fg-xrg" secondAttribute="trailing" constant="5" id="Xgy-r7-gIs"/>
+                                    <constraint firstItem="CBY-n9-TWU" firstAttribute="top" secondItem="jUe-nr-GLh" secondAttribute="top" id="bd3-Ni-xZb"/>
+                                    <constraint firstItem="CBY-n9-TWU" firstAttribute="leading" secondItem="jUe-nr-GLh" secondAttribute="leading" id="bkr-br-gWH"/>
+                                    <constraint firstItem="qLi-Fg-xrg" firstAttribute="top" secondItem="jUe-nr-GLh" secondAttribute="top" constant="5" id="dQA-QH-qiO"/>
+                                    <constraint firstAttribute="bottom" secondItem="qLi-Fg-xrg" secondAttribute="bottom" constant="5" id="sih-93-UJL"/>
+                                    <constraint firstItem="qLi-Fg-xrg" firstAttribute="leading" secondItem="jUe-nr-GLh" secondAttribute="leading" constant="5" id="vQ6-uy-psE"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="◦◦◦◦"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="secureText" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="underlineHSpacing">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderTextString" value="◦◦◦◦"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="CBY-n9-TWU"/>
+                                        <exclude reference="qLi-Fg-xrg"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vdv-9H-4Eo" firstAttribute="top" secondItem="jUe-nr-GLh" secondAttribute="bottom" constant="60" id="Hxl-Yf-hvb"/>
+                            <constraint firstItem="Vdv-9H-4Eo" firstAttribute="centerX" secondItem="22u-R0-Q4O" secondAttribute="centerX" id="VTc-Sh-yej"/>
+                            <constraint firstItem="jUe-nr-GLh" firstAttribute="width" secondItem="22u-R0-Q4O" secondAttribute="width" multiplier="0.7" id="fhy-3b-V5Z"/>
+                            <constraint firstItem="DgH-3B-2oY" firstAttribute="top" secondItem="zgE-4Y-3Yl" secondAttribute="top" constant="79" id="lGW-Ld-3PY"/>
+                            <constraint firstItem="jUe-nr-GLh" firstAttribute="centerX" secondItem="22u-R0-Q4O" secondAttribute="centerX" id="pLW-6r-Gj4"/>
+                            <constraint firstItem="DgH-3B-2oY" firstAttribute="centerX" secondItem="22u-R0-Q4O" secondAttribute="centerX" id="r4S-l9-s9n"/>
+                            <constraint firstItem="jUe-nr-GLh" firstAttribute="top" secondItem="DgH-3B-2oY" secondAttribute="bottom" constant="30" id="ySO-37-fBA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zgE-4Y-3Yl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Passcode" id="sMX-3Z-Wdt">
+                        <barButtonItem key="backBarButtonItem" title="Settings" id="LjU-aV-dg5"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="pinView" destination="jUe-nr-GLh" id="9Ym-H0-IxS"/>
+                        <outlet property="settingButton" destination="Vdv-9H-4Eo" id="JtE-2C-xYp"/>
+                        <outlet property="titleLabel" destination="DgH-3B-2oY" id="ReO-h7-IdZ"/>
+                        <segue destination="kAa-zv-dJx" kind="show" id="sGN-Eg-SLZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3S-wP-ufx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143" y="209"/>
+        </scene>
+        <!--Passcode-->
+        <scene sceneID="TI1-dF-hBW">
+            <objects>
+                <viewController storyboardIdentifier="SettingsPasscodeRepeatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kAa-zv-dJx" customClass="SettingsPasscodeRepeatViewController" customModule="MMWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EjC-md-zUM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xg7-pC-Rui">
+                                <rect key="frame" x="96.5" y="292.5" width="182.5" height="36"/>
+                                <string key="text">Passcodes did not match.
+Try again.</string>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="15"/>
+                                <color key="textColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat Passcode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dw5-t9-HYM">
+                                <rect key="frame" x="123" y="143" width="130.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tvF-aj-nNm" customClass="PinCodeTextField" customModule="MMWallet" customModuleProvider="target">
+                                <rect key="frame" x="56" y="192.5" width="262.5" height="40"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rpr-48-xcb">
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="40"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oc3-WJ-pBl" customClass="PinInput" customModule="PinInputView">
+                                        <rect key="frame" x="5" y="5" width="252.5" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="length">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Oc3-WJ-pBl" secondAttribute="trailing" constant="5" id="4gP-Nu-ti2"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oc3-WJ-pBl" secondAttribute="bottom" constant="5" id="E9X-bu-XWl"/>
+                                    <constraint firstItem="Oc3-WJ-pBl" firstAttribute="top" secondItem="tvF-aj-nNm" secondAttribute="top" constant="5" id="M4r-Pp-Ozz"/>
+                                    <constraint firstAttribute="height" constant="40" id="Qkb-xR-Zp3"/>
+                                    <constraint firstAttribute="trailing" secondItem="rpr-48-xcb" secondAttribute="trailing" id="d2G-gw-uGE"/>
+                                    <constraint firstItem="rpr-48-xcb" firstAttribute="top" secondItem="tvF-aj-nNm" secondAttribute="top" id="f4M-ne-EIO"/>
+                                    <constraint firstItem="Oc3-WJ-pBl" firstAttribute="leading" secondItem="tvF-aj-nNm" secondAttribute="leading" constant="5" id="lmB-61-joH"/>
+                                    <constraint firstItem="rpr-48-xcb" firstAttribute="leading" secondItem="tvF-aj-nNm" secondAttribute="leading" id="tC5-H5-Fzc"/>
+                                    <constraint firstAttribute="bottom" secondItem="rpr-48-xcb" secondAttribute="bottom" id="tax-mH-UOn"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderText" value="◦◦◦◦"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fontSize">
+                                        <real key="value" value="45"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="characterLimit">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="secureText" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="underlineColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="underlineHSpacing">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholderTextString" value="◦◦◦◦"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="rpr-48-xcb"/>
+                                        <exclude reference="Oc3-WJ-pBl"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xg7-pC-Rui" firstAttribute="top" secondItem="tvF-aj-nNm" secondAttribute="bottom" constant="60" id="7tK-6y-7La"/>
+                            <constraint firstItem="dw5-t9-HYM" firstAttribute="top" secondItem="HCz-8s-tiI" secondAttribute="top" constant="79" id="JWG-i2-RYn"/>
+                            <constraint firstItem="Xg7-pC-Rui" firstAttribute="centerX" secondItem="EjC-md-zUM" secondAttribute="centerX" id="VbX-iK-SsH"/>
+                            <constraint firstItem="tvF-aj-nNm" firstAttribute="width" secondItem="EjC-md-zUM" secondAttribute="width" multiplier="0.7" id="csW-mL-c3r"/>
+                            <constraint firstItem="tvF-aj-nNm" firstAttribute="top" secondItem="dw5-t9-HYM" secondAttribute="bottom" constant="30" id="o1f-dI-QhR"/>
+                            <constraint firstItem="tvF-aj-nNm" firstAttribute="centerX" secondItem="EjC-md-zUM" secondAttribute="centerX" id="pIa-bf-zSY"/>
+                            <constraint firstItem="dw5-t9-HYM" firstAttribute="centerX" secondItem="EjC-md-zUM" secondAttribute="centerX" id="zeJ-YU-Lq0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HCz-8s-tiI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Passcode" id="fyv-nu-g5e"/>
+                    <connections>
+                        <outlet property="errorLabel" destination="Xg7-pC-Rui" id="xwL-Pm-r3K"/>
+                        <outlet property="pinView" destination="tvF-aj-nNm" id="D7u-pa-Fjs"/>
+                        <outlet property="titleLabel" destination="dw5-t9-HYM" id="BoQ-YI-sWg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WY6-Cc-hNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1852" y="215"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="QRView" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ivr-BA-tQs">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" red="0.015686274510000001" green="0.015686274510000001" blue="0.058823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SlI-kr-sH5">
+                    <rect key="frame" x="8" y="161" width="359" height="341"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyQ-Jx-es9">
+                            <rect key="frame" x="323" y="4" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="gd1-jX-3Of"/>
+                                <constraint firstAttribute="width" constant="32" id="xLF-oV-d4B"/>
+                            </constraints>
+                            <state key="normal" image="closeIcon"/>
+                            <connections>
+                                <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="M4i-eD-mnh"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7V5-Y4-tfY">
+                            <rect key="frame" x="85" y="75" width="188" height="188"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e2j-Fw-Drx">
+                                    <rect key="frame" x="0.0" y="0.0" width="188" height="188"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="e2j-Fw-Drx" secondAttribute="trailing" id="EHd-vx-dcv"/>
+                                <constraint firstAttribute="bottom" secondItem="e2j-Fw-Drx" secondAttribute="bottom" id="Pwt-iR-KF9"/>
+                                <constraint firstAttribute="width" constant="188" id="QEY-a9-YBe"/>
+                                <constraint firstAttribute="height" constant="188" id="YnE-7C-KcB"/>
+                                <constraint firstItem="e2j-Fw-Drx" firstAttribute="top" secondItem="7V5-Y4-tfY" secondAttribute="top" id="olT-BV-HCV"/>
+                                <constraint firstItem="e2j-Fw-Drx" firstAttribute="leading" secondItem="7V5-Y4-tfY" secondAttribute="leading" id="s3Q-Y2-Bll"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="xyQ-Jx-es9" secondAttribute="trailing" constant="4" id="CyD-tP-y9G"/>
+                        <constraint firstAttribute="height" constant="341" id="FFR-6F-6UE"/>
+                        <constraint firstItem="7V5-Y4-tfY" firstAttribute="top" secondItem="SlI-kr-sH5" secondAttribute="top" constant="75" id="GCW-us-P68"/>
+                        <constraint firstItem="7V5-Y4-tfY" firstAttribute="centerX" secondItem="SlI-kr-sH5" secondAttribute="centerX" id="VGq-AX-CVH"/>
+                        <constraint firstItem="xyQ-Jx-es9" firstAttribute="top" secondItem="SlI-kr-sH5" secondAttribute="top" constant="4" id="uPL-e5-CPX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Ivr-BA-tQs" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1hB-ut-jJ8"/>
+                <constraint firstItem="Ivr-BA-tQs" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="3Cc-VC-N8H"/>
+                <constraint firstItem="Ivr-BA-tQs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TCE-8k-WRX"/>
+                <constraint firstItem="SlI-kr-sH5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="141" id="Tjz-9Z-fMB"/>
+                <constraint firstItem="SlI-kr-sH5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="h6W-3Z-n2z"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SlI-kr-sH5" secondAttribute="trailing" constant="8" id="igx-3s-zIT"/>
+                <constraint firstItem="Ivr-BA-tQs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="p5h-dy-ul5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backView" destination="SlI-kr-sH5" id="xfs-S8-Pfk"/>
+                <outlet property="closeButton" destination="xyQ-Jx-es9" id="m0c-CC-TJO"/>
+                <outlet property="qrImageView" destination="e2j-Fw-Drx" id="vXE-Ut-PY3"/>
+                <outlet property="qrView" destination="7V5-Y4-tfY" id="2OC-az-7iC"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeIcon" width="14" height="14"/>
+    </resources>
+</document>

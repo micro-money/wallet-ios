@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TransactionDetailView" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="807"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB3-dY-2d9">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="807"/>
+                    <color key="backgroundColor" red="0.015686274509803921" green="0.015686274509803921" blue="0.058823529411764705" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHA-7C-aKg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="807"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ItC-jC-8hC">
+                            <rect key="frame" x="8" y="41" width="359" height="1139"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awa-eR-iD8">
+                                    <rect key="frame" x="323" y="4" width="32" height="32"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="0rT-ac-RbS"/>
+                                        <constraint firstAttribute="height" constant="32" id="Dq5-Z2-1Hj"/>
+                                    </constraints>
+                                    <state key="normal" image="closeIcon"/>
+                                    <connections>
+                                        <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="gFp-2D-CVD"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9ba-aG-ZzC">
+                                    <rect key="frame" x="0.0" y="36" width="359" height="1089"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="9ba-aG-ZzC" secondAttribute="trailing" id="2sm-DO-BYS"/>
+                                <constraint firstAttribute="bottom" secondItem="9ba-aG-ZzC" secondAttribute="bottom" constant="14" id="IkM-S1-cmH"/>
+                                <constraint firstItem="awa-eR-iD8" firstAttribute="top" secondItem="ItC-jC-8hC" secondAttribute="top" constant="4" id="LpT-QO-NJ3"/>
+                                <constraint firstItem="9ba-aG-ZzC" firstAttribute="leading" secondItem="ItC-jC-8hC" secondAttribute="leading" id="fZT-Kw-y7d"/>
+                                <constraint firstAttribute="trailing" secondItem="awa-eR-iD8" secondAttribute="trailing" constant="4" id="lKj-Gl-bdd"/>
+                                <constraint firstItem="9ba-aG-ZzC" firstAttribute="top" secondItem="awa-eR-iD8" secondAttribute="bottom" id="nqU-QA-4dh"/>
+                                <constraint firstAttribute="height" constant="1139" id="vj3-DK-QCG"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ItC-jC-8hC" firstAttribute="centerX" secondItem="yHA-7C-aKg" secondAttribute="centerX" id="Adk-Up-llf"/>
+                        <constraint firstAttribute="trailing" secondItem="ItC-jC-8hC" secondAttribute="trailing" constant="8" id="Gwq-5P-hbH"/>
+                        <constraint firstItem="ItC-jC-8hC" firstAttribute="leading" secondItem="yHA-7C-aKg" secondAttribute="leading" constant="8" id="fa4-ey-gr3"/>
+                        <constraint firstItem="ItC-jC-8hC" firstAttribute="top" secondItem="yHA-7C-aKg" secondAttribute="top" constant="41" id="xJi-FU-way"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="yHA-7C-aKg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ekc-Qa-l5N"/>
+                <constraint firstItem="yHA-7C-aKg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Tt9-2w-l9f"/>
+                <constraint firstItem="yHA-7C-aKg" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="WsN-c9-gJ0"/>
+                <constraint firstItem="IB3-dY-2d9" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="guY-fd-cM2"/>
+                <constraint firstItem="IB3-dY-2d9" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="ma1-bH-vwP"/>
+                <constraint firstItem="IB3-dY-2d9" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="pis-ye-gCp"/>
+                <constraint firstItem="yHA-7C-aKg" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="ptO-Mk-IRd"/>
+                <constraint firstItem="IB3-dY-2d9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="yM0-V3-1Ui"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backView" destination="ItC-jC-8hC" id="JOQ-Fo-vmI"/>
+                <outlet property="backViewHeightConstraint" destination="vj3-DK-QCG" id="GZw-k9-uu9"/>
+                <outlet property="backViewTopConstraint" destination="xJi-FU-way" id="7dX-re-mtY"/>
+                <outlet property="closeButton" destination="awa-eR-iD8" id="n42-fp-hGN"/>
+                <outlet property="scrollView" destination="yHA-7C-aKg" id="AYe-Xe-UM3"/>
+                <outlet property="tableView" destination="9ba-aG-ZzC" id="x0g-mn-Y6G"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="123.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeIcon" width="14" height="14"/>
+    </resources>
+</document>

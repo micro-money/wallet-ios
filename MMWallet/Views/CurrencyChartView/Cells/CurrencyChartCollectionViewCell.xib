@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Bold.otf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CurrencyChartCollectionViewCell" id="VyR-kA-FlL" customClass="CurrencyChartCollectionViewCell" customModule="MMWallet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="100" height="32"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.47999999999999998" contentMode="left" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf7-iB-gDn">
+                        <rect key="frame" x="34" y="7" width="66" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="xbm-yX-Vyx"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.47999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKp-VB-dUD">
+                        <rect key="frame" x="0.0" y="9" width="30" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="sO0-av-8Ff"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WKp-VB-dUD" firstAttribute="leading" secondItem="VyR-kA-FlL" secondAttribute="leading" id="417-jP-plj"/>
+                <constraint firstItem="bf7-iB-gDn" firstAttribute="leading" secondItem="WKp-VB-dUD" secondAttribute="trailing" constant="4" id="gqu-KU-Aex"/>
+                <constraint firstItem="WKp-VB-dUD" firstAttribute="bottom" secondItem="bf7-iB-gDn" secondAttribute="bottom" id="hJy-FO-8PO"/>
+                <constraint firstAttribute="trailing" secondItem="bf7-iB-gDn" secondAttribute="trailing" id="jCe-s7-D0V"/>
+                <constraint firstItem="bf7-iB-gDn" firstAttribute="centerY" secondItem="VyR-kA-FlL" secondAttribute="centerY" id="wJd-ze-KKZ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="yWP-Eg-XSd"/>
+            <size key="customSize" width="99" height="32"/>
+            <connections>
+                <outlet property="currencyLabel" destination="WKp-VB-dUD" id="hwJ-3z-dnb"/>
+                <outlet property="dataLabel" destination="bf7-iB-gDn" id="lj7-t3-k2S"/>
+            </connections>
+            <point key="canvasLocation" x="55.5" y="-48"/>
+        </collectionViewCell>
+    </objects>
+</document>
