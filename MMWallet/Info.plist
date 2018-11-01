@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -31,7 +31,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>$(GOOGLE_CLIENT_ID)</string>
+				<string>$GOOGLE_SCHEME</string>
 			</array>
 		</dict>
 		<dict>
@@ -62,7 +62,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>28</string>
+	<string>2</string>
 	<key>DEMO_LOGIN</key>
 	<string>$(DEMO_LOGIN)</string>
 	<key>Fabric</key>
@@ -85,6 +85,8 @@
 	<string>test-wallet</string>
 	<key>GOOGLE_CLIENT_ID</key>
 	<string>$(GOOGLE_CLIENT_ID)</string>
+	<key>GOOGLE_SCHEME</key>
+	<string>$(GOOGLE_SCHEME)</string>
 	<key>KAKAO_APP_KEY</key>
 	<string>$(KAKAO_APP_KEY)</string>
 	<key>KEYCHAIN_ID</key>

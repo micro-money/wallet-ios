@@ -20,7 +20,8 @@
     
     SERVER_URL = subdomain.yourdomain.com
 
-    GOOGLE_CLIENT_ID = com.googleusercontent.apps.X
+    GOOGLE_CLIENT_ID = 00000000000-00000000000000000000000000000000.apps.googleusercontent.com
+    GOOGLE_SCHEME = com.googleusercontent.apps.00000000000-00000000000000000000000000000000
 
     FACEBOOK_APP_ID = 000000000000000
 
